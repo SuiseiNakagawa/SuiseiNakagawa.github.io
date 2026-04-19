@@ -28,7 +28,7 @@ const projects: Project[] = [
     imageSrc: '/abide.png',
     imageAlt: 'Graph representation sample from ABIDE Graph Classifier',
     links: {
-      github: 'https://github.com/SuiseiNakagawa/abide-graph-classifier',
+      github: 'https://github.com/SuiseiNakagawa/abide-classifier',
     },
   },
   {

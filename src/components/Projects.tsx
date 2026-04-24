@@ -20,9 +20,9 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'ABIDE Graph Classifier',
-    hook: 'Do graph neural networks actually help ASD vs control classification when all models share the same ABIDE connectivity pipeline?',
+    hook: 'Across matched ABIDE pipelines, how do matrix vs graph representations compare, and does parcellation choice (CC200 vs AAL) change ASD vs control performance?',
     approach:
-      'Using ABIDE preprocessed resting-state fMRI (n=1035), I built a shared pipeline that derives Fisher z-transformed functional connectivity and compares matrix models (Logistic Regression, MLP) against graph models (GCN, GAT). On the held-out test set, Logistic Regression achieved the highest ROC-AUC (0.7228), suggesting the current top-k graph formulation (k=10) did not outperform simpler baselines in this setup.',
+      'Using ABIDE Preprocessed resting-state fMRI (n=1035), I implemented two structurally identical pipelines over the same connectivity signal: vectorized Fisher z functional-connectivity matrices and top-k PyTorch Geometric graphs. I compared CC200 (200 ROIs, 19,900 features) and AAL (116 ROIs, 6,670 features) under a strict site-holdout protocol (UM_1 + YALE, n=162 test) with 5-fold CV tuning on the remaining sites. Matrix models consistently outperformed graph models in both parcellations, and CC200 outperformed AAL across all models; best test ROC-AUC was Logistic Regression on CC200 (0.8006), with reduced performance on AAL (0.7452).',
     diagramLabel: 'Model Comparison (ROC-AUC)',
     tags: ['fMRI', 'PyTorch Geometric', 'Graph ML', 'ASD Classification'],
     imageSrc: '/abide.png',

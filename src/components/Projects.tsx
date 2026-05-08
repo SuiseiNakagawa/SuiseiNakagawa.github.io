@@ -59,13 +59,17 @@ const projects: Project[] = [
     },
   },
   {
-    enabled: false,
-    title: 'Attention-Based Time Series Forecasting',
-    hook: 'Can transformers reliably capture long-range temporal dependencies in noisy, irregularly-sampled data?',
+    title: 'Temporal Style Classification in Japanese Ceramics',
+    hook: 'Can neural networks learn deep stylistic distinctions across Japanese ceramic traditions from limited, imbalanced heritage data?',
     approach:
-      'We introduce a sparse self-attention mechanism tailored for time-series that selectively attends to salient historical windows. Evaluated across energy, financial, and biomedical benchmarks, our approach reduces MSE by 15% relative to full-attention baselines while halving computational cost.',
-    diagramLabel: 'Architecture Diagram',
-    tags: ['PyTorch', 'Transformers', 'Time Series'],
+      'Leveraging 1,915 ceramic objects from the Metropolitan Museum API (spanning ~12,000 years), I trained ResNet50, EfficientNet-B0, and ViT-B/16 models on a 5-class period classification task (ancient, medieval, momoyama, edo, meiji) with severe class imbalance. Using pretrained ImageNet features and class-weighted loss, baseline models achieved 73–76% validation accuracy. Current focus: understanding why pretrained features transfer well immediately but fine-tuning degrades performance, motivating systematic optimization experiments in transfer learning depth and hyperparameter scaling.',
+    diagramLabel: 'Ceramic Period Classification',
+    tags: ['Computer Vision', 'Transfer Learning', 'Art Analysis', 'Imbalanced Data'],
+    imageSrc: '/pottery_img.png',
+    imageAlt: 'Japanese ceramic period classification samples',
+    links: {
+      github: 'https://github.com/SuiseiNakagawa/japanese-pottery-classification',
+    },
   },
   {
     enabled: false,

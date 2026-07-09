@@ -37,9 +37,11 @@ export default function Hero() {
             {/* Bio paragraph */}
             <p className="t-body max-w-[580px]">
               I am an undergraduate student at Minerva University working on machine learning and 
-              applied statistics. My research interests broadly lie in statistical machine 
-              learning and applied data analysis, with a focus on building models for noisy, 
-              real-world datasets. 
+              applied statistics. My research interests broadly lie in deep learning, with a focus 
+              on building models for noisy, real-world datasets. 
+              I am currently interning at the National Institute of Advanced Industrial Science 
+              and Technology (AIST) in Japan, where I am conducting computer vision research on 
+              event cameras.
               I am also working on a project at Universidad de Buenos Aires on 
               <a href="#" className="link-accent"> mispitools</a>, an R package that incorporates 
               non-genetic evidence into missing person searces under a Bayesian framework. 

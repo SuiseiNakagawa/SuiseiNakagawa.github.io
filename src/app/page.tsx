@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
+import Teaching from '@/components/Teaching'
 import Publications from '@/components/Publications'
 import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Education />
         <Experience />
+        <Teaching />
         {SHOW_PUBLICATIONS && <Publications />}
         <Projects />
       </main>

@@ -6,6 +6,7 @@ import { SHOW_PUBLICATIONS } from '@/config/features'
 const navLinks = [
   { label: 'Education', href: '#education' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Teaching', href: '#teaching' },
   ...(SHOW_PUBLICATIONS ? [{ label: 'Publications', href: '#publications' }] : []),
   { label: 'Projects', href: '#projects' },
 ]

@@ -12,7 +12,7 @@ const experiences: ExperienceItem[] = [
     dateRange: 'June 2026 – Present',
     bullets: [
       'Conducting computer vision research on event cameras, working with asynchronous event-based visual data.',
-      'Building a neural network backbone for event-based vision tasks.'
+      'Developing extensions to existing event-based vision models.'
     ]
   },
   {

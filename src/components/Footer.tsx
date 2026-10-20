@@ -1,5 +1,8 @@
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const now = new Date()
+  const year = now.getFullYear()
+  // Static export: this is evaluated at build time, i.e. the date of the last deploy.
+  const updated = now.toLocaleString('en-US', { month: 'long', year: 'numeric' })
 
   return (
     <footer className="py-10 px-6 md:px-10 border-t border-[#E0DDD6] mt-4">
@@ -9,7 +12,7 @@ export default function Footer() {
           <span className="font-medium text-[#3A3A3A]">Suisei Nakagawa</span>
         </p>
         <p className="t-label text-center sm:text-right">
-          Last updated April {year}&ensp;&middot;&ensp;Built with{' '}
+          Last updated {updated}&ensp;&middot;&ensp;Built with{' '}
           <a
             href="https://nextjs.org"
             className="link-accent"

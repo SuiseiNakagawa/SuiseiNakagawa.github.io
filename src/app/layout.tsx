@@ -18,21 +18,21 @@ const sourceSans3 = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: 'Suisei Nakagawa — ML Research',
+  title: 'Suisei Nakagawa — Computer Vision & Deep Learning',
   description:
-    'ML research portfolio of Suisei Nakagawa. Research interests include [Topic A], [Topic B], and [Topic C].',
-  keywords: ['machine learning', 'deep learning', 'research', 'NLP', 'computer vision'],
+    'Portfolio of Suisei Nakagawa, a machine learning student at Minerva University. Research interests include computer vision and deep learning.',
+  keywords: ['computer vision', 'deep learning', 'machine learning', 'event cameras', 'Minerva University'],
   authors: [{ name: 'Suisei Nakagawa' }],
   openGraph: {
-    title: 'Suisei Nakagawa — ML Research',
-    description: 'ML research portfolio of Suisei Nakagawa.',
+    title: 'Suisei Nakagawa — Computer Vision & Deep Learning',
+    description: 'Portfolio of Suisei Nakagawa: computer vision and deep learning.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary',
-    title: 'Suisei Nakagawa — ML Research',
-    description: 'ML research portfolio of Suisei Nakagawa.',
+    title: 'Suisei Nakagawa — Computer Vision & Deep Learning',
+    description: 'Portfolio of Suisei Nakagawa: computer vision and deep learning.',
   },
   robots: {
     index: true,

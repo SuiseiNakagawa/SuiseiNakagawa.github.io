@@ -45,12 +45,12 @@ export default function Education() {
               <div className="flex flex-col gap-1 mt-1">
                 <p className="t-label">
                   <span className="font-medium text-[#3A3A3A]">GPA:</span>{' '}
-                  3.84 / 4.0
+                  3.85 / 4.0
                 </p>
                 <p className="t-label">
                   <span className="font-medium text-[#3A3A3A]">Relevant coursework:</span>{' '}
                   Machine Learning, Bayesian Statistics, Modeling of Complex Systems, 
-                  Linear Algebra, Probability and Statistics
+                  Optimization Methods, Linear Algebra, Probability and Statistics
                 </p>
               </div>
             </div>

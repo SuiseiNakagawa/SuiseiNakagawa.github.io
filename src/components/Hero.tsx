@@ -26,7 +26,7 @@ export default function Hero() {
             <div>
               <h1 className="t-display">Suisei Nakagawa</h1>
               <p className="t-label mt-2.5 flex items-center gap-2 flex-wrap">
-                <span>Machine Learning and Data Science Student</span>
+                <span>Machine Learning and Computer Vision Student</span>
                 <span className="text-[#C8C3BA]">·</span>
                 <a href="https://www.minerva.edu/" className="link-accent font-sans font-medium text-sm">
                   Minerva University
@@ -36,15 +36,15 @@ export default function Hero() {
 
             {/* Bio paragraph */}
             <p className="t-body max-w-[580px]">
-              I am an undergraduate student at Minerva University working on machine learning and 
-              applied statistics. My research interests broadly lie in deep learning, with a focus 
-              on building models for noisy, real-world datasets. 
-              I am currently interning at the National Institute of Advanced Industrial Science 
-              and Technology (AIST) in Japan, where I am conducting computer vision research on 
-              event cameras.
-              I am also working on a project at Universidad de Buenos Aires on 
-              <a href="#" className="link-accent"> mispitools</a>, an R package that incorporates 
-              non-genetic evidence into missing person searces under a Bayesian framework. 
+              I am an undergraduate student at Minerva University working on machine learning and
+              applied statistics. My research interests lie in deep learning and computer vision,
+              particularly for data beyond conventional formats.
+              I am currently interning at the National Institute of Advanced Industrial Science
+              and Technology (AIST) in Japan, where I am extending existing models for event cameras,
+              sensors that record asynchronous brightness changes rather than frames.
+              Previously, I worked with Universidad de Buenos Aires on
+              <a href="https://github.com/MarsicoFL/mispitools" className="link-accent" target="_blank" rel="noreferrer"> mispitools</a>, an R package that incorporates
+              non-genetic evidence into missing person searches under a Bayesian framework.
             </p>
 
             {/* Social links */}
@@ -79,9 +79,9 @@ export default function Hero() {
                 <BookOpen size={15} strokeWidth={1.75} />
                 <span>Google Scholar</span>
               </a> */}
-              <a href="mailto:suisei.nakagawa@uniminerva.edu" className="icon-link" aria-label="Send email">
+              <a href="mailto:suisei.nakagawa@uni.minerva.edu" className="icon-link" aria-label="Send email">
                 <Mail size={15} strokeWidth={1.75} />
-                <span>suisei.nakagawa@uniminerva.edu</span>
+                <span>suisei.nakagawa@uni.minerva.edu</span>
               </a>
             </div>
           </div>

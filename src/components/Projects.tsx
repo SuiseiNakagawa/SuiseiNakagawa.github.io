@@ -20,11 +20,11 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'Surfacing Noteworthy Student Contributions in Seminar Recordings',
-    hook: 'Can a grader find each student\u2019s most substantive contributions in a 90-minute seminar recording without watching all of it, and without any labeled data?',
+    hook: 'Can the most substantive student contributions in a seminar be identified from conversational structure alone, without labeled data?',
     approach:
-      'Built a local triage tool for Minerva\u2019s Forum classroom. It reads the platform\u2019s own speaker-activity log to locate every student turn, aligned to the recording at millisecond precision, with breakout periods excluded because the recording follows only one group. It then streams just the audio around each turn and transcribes it on-device with Whisper (faster-whisper, int8, sized for an 8 GB laptop). Each turn is split into sentences, and conversational bookkeeping (checking the question, warming up, agreeing) is separated from substance by sentence-embedding similarity to editable prototype phrases. Noteworthiness is an unweighted mean of within-class percentiles: amount and share of substance, similarity to the preceding prompt, instructor uptake, and novelty relative to earlier turns. It produces a per-student ranking with the reasons shown. No model is trained on student data, and no audio leaves the machine. Next: validating the rankings against an instructor\u2019s ratings of past classes.',
+      'Frames contribution quality as unsupervised ranking over discussion turns. Turns are recovered from the classroom platform\u2019s speaker-activity log, transcribed on-device with Whisper, and paired with the prompt before and the response after. Utterances are embedded with a pretrained sentence encoder (all-MiniLM-L6-v2, trained contrastively on large-scale sentence pairs), and procedural talk is separated from substance by nearest-prototype classification against a small set of example utterances. The substance is scored on amount, focus, cosine relevance to the prompt, instructor uptake, and novelty, then combined by unweighted rank aggregation into a per-student ranking with the reasons shown. No model is trained on student data, and recordings never leave the machine.',
     diagramLabel: 'Turn-level Pipeline',
-    tags: ['Speech Recognition', 'Sentence Embeddings', 'Unsupervised Ranking', 'Education Data'],
+    tags: ['Python', 'Whisper ASR', 'Sentence Transformers', 'Unsupervised Ranking'],
     imageSrc: '/forum_contributions.png',
     imageAlt: 'Schematic: student turns on a class timeline shaded by noteworthiness, with breakouts excluded, and one turn split into bookkeeping and substance',
   },
@@ -72,7 +72,7 @@ const projects: Project[] = [
     title: 'Temporal Style Classification in Japanese Ceramics',
     hook: 'Can neural networks learn deep stylistic distinctions across Japanese ceramic traditions from limited, imbalanced heritage data?',
     approach:
-      'Leveraging 1,915 ceramic objects from the Metropolitan Museum API (spanning ~12,000 years), I trained ResNet50, EfficientNet-B0, and ViT-B/16 models on a 5-class period classification task (ancient, medieval, momoyama, edo, meiji) with severe class imbalance. Using pretrained ImageNet features and class-weighted loss, baseline models achieved 73–76% validation accuracy. Current focus: understanding why pretrained features transfer well immediately but fine-tuning degrades performance, motivating systematic optimization experiments in transfer learning depth and hyperparameter scaling.',
+      'Leveraging 1,915 ceramic objects from the Metropolitan Museum API (spanning ~12,000 years), I trained ResNet50, EfficientNet-B0, and ViT-B/16 models on a 5-class period classification task (ancient, medieval, momoyama, edo, meiji) with severe class imbalance. Using pretrained ImageNet features and class-weighted loss, baseline models achieved 73–76% validation accuracy. Pretrained features transferred well out of the box, while fine-tuning degraded performance; why remains an open question, and the project is currently paused.',
     diagramLabel: 'Ceramic Period Classification',
     tags: ['Computer Vision', 'Transfer Learning', 'Art Analysis', 'Imbalanced Data'],
     imageSrc: '/pottery_img.png',
@@ -80,15 +80,6 @@ const projects: Project[] = [
     links: {
       github: 'https://github.com/SuiseiNakagawa/japanese-pottery-classification',
     },
-  },
-  {
-    enabled: false,
-    title: 'Few-Shot Learning for Medical Imaging',
-    hook: 'Medical datasets are costly to annotate — can we adapt to new pathologies from only 5–10 labeled examples?',
-    approach:
-      'Building on prototypical networks, we augment the embedding space with anatomy-aware geometric priors derived from segmentation masks. The approach achieves strong few-shot accuracy on CheXpert and PathMNIST without fine-tuning, generalizing across imaging modalities.',
-    diagramLabel: 'Results Visualization',
-    tags: ['PyTorch', 'Medical Imaging', 'Meta-Learning'],
   },
 ]
 

@@ -27,6 +27,9 @@ const projects: Project[] = [
     tags: ['Python', 'Whisper ASR', 'Sentence Transformers', 'Unsupervised Ranking'],
     imageSrc: '/forum_contributions.png',
     imageAlt: 'Schematic: student turns on a class timeline shaded by noteworthiness, with breakouts excluded, and one turn split into bookkeeping and substance',
+    links: {
+      github: 'https://github.com/SuiseiNakagawa/forum-contribution-checker',
+    },
   },
   {
     title: 'ABIDE Classifier',

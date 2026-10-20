@@ -54,6 +54,8 @@ body {
 .reveal-group.visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 90ms; }
 .reveal-group.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 180ms; }
 .reveal-group.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 270ms; }
+/* any further cards (5th, 6th, ...) must also become visible */
+.reveal-group.visible > *:nth-child(n+5) { opacity: 1; transform: translateY(0); transition-delay: 360ms; }
 
 /* ─────────────────────────────────────────────────────
    Typography Scale

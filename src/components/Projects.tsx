@@ -100,7 +100,7 @@ export default function Projects() {
         {/* Section heading */}
         <div className="mb-10 reveal">
           <p className="t-meta text-accent mb-2">Projects</p>
-          <h2 className="t-section-heading section-heading-accent">Research Projects</h2>
+          <h2 className="t-section-heading section-heading-accent">Projects</h2>
         </div>
 
         {/* Grid */}

@@ -19,6 +19,19 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: 'Grading and Generating Climbing-Board Problems',
+    hook: 'Can a model tell how hard a Kilter Board climb is from its holds alone, and set new climbs at a grade you ask for?',
+    approach:
+      'Using about 72,000 community-graded climbs on the Kilter Board Original, split by climb, I compared gradient boosting on hand-crafted geometry with a message-passing graph neural network in plain PyTorch: holds are nodes, holds within reach share an edge carrying the move, and each board position gets a learned embedding. The graph network grades 82% of unseen climbs within one V-grade, against 80% for boosting with target-encoded hold difficulty and 45% for an angle-only baseline, and its advantage is concentrated on V8 and above. A 2.1M-parameter GPT then writes new climbs hold by hold, conditioned on angle and grade, and the graph network grades them: 93% pass plausibility checks calibrated on real climbs (96% for real ones), none copy a training climb, and 68% land within one grade of the request, against 26% when the request is ignored. A small local app wraps both models, with a reach limit derived from the climber\u2019s wingspan.',
+    diagramLabel: 'Grading and Generating Climbs',
+    tags: ['PyTorch', 'Graph Neural Networks', 'Transformers', 'Generative Models'],
+    imageSrc: '/kilter_climbs.png',
+    imageAlt: 'Left: a climb on the board drawn as a graph of holds, fed to a graph network that predicts V8. Right: a request for V3 at 25 degrees, fed to a GPT that sets a new climb on the board',
+    links: {
+      github: 'https://github.com/SuiseiNakagawa/kilter-climb-generator',
+    },
+  },
+  {
     title: 'Surfacing Noteworthy Student Contributions in Seminar Recordings',
     hook: 'Can the most substantive student contributions in a seminar be identified from conversational structure alone, without labeled data?',
     approach:
